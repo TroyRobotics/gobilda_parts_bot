@@ -33,7 +33,7 @@ class GobildaPartsBotPipeline:
                     file_in_zip = zip.namelist()[0] # Should be only 1 file in zip
                     
                     unzipped_path = zip.extract(file_in_zip, FILES_STORE)
-                    os.rename(unzipped_path, FILES_STORE + '/' + name + '.STEP')
+                    os.rename(unzipped_path, FILES_STORE + '/' + sku + '.STEP')
 
                 os.remove(zip_path)
         return item
